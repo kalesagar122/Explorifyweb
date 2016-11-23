@@ -1,0 +1,60 @@
+﻿@model Explorify.Models.JobDetailModel
+@{
+    ViewBag.Title = "Job Details";
+}
+
+<h2>@Model.JobTitle</h2>
+<hr/>
+<div><b>Posted Date:</b> <span style="font-style: italic;">@Model.PostedDate</span>, <b>Expired Date: </b><span style="font-style: italic;">@Model.ExpireDate</span></div>
+<br />
+<table class="table">
+    <tr>
+        <th>Experience</th>
+        <td>@Model.YearExpereince years & @Model.MonthExperience months</td>
+    </tr>
+    <tr>
+        <th>Skills</th>
+        <td>@Model.Skills</td>
+    </tr>
+    <tr>
+        <th>Category</th>
+        <td>@Model.Category</td>
+    </tr>
+    <tr>
+        <th>Company Job Id</th>
+        <td>@Model.CompanyJobId</td>
+    </tr>
+    <tr>
+        <th>Company Name</th>
+        <td>@Model.CompanyName</td>
+    </tr>
+    <tr>
+        <th>Company Address</th>
+        <td>@Model.CompanyAddress</td>
+    </tr>
+    <tr>
+        <th>Company Website</th>
+        <td>@Model.Website</td>
+    </tr>
+</table>
+
+<div class="row">
+    <div class="col-md-12">
+        <h4>Job Description</h4>
+    </div>
+    <div class="col-md-12">
+        <p>@Model.JobDetails</p>
+    </div>
+</div>
+<hr/>
+
+<div class="row">
+    <div class="col-md-12">
+        <h4>@Model.CompanyName</h4>
+        <address>
+            @Model.CompanyAddress
+        </address> <br/>
+        <img src="@Model.ImagePath" title="logo" width="150px"/>
+    </div>
+</div>
+

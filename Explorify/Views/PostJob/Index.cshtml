@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Manage Jobs";
+}
+@section style {
+    <link href="@Url.Content("~/Content/datatables/dataTables.bootstrap.css")" rel="stylesheet"/>
+    <link  href="@Url.Content("~/Scripts/toastr/toastr.css")" rel="stylesheet" />
+}
+@section scripts {
+    <script src="@Url.Content("~/Content/datatables/jquery.dataTables.js")"></script>
+    <script src="@Url.Content("~/Content/datatables/dataTables.bootstrap.js")"></script>
+    <script src="@Url.Content("~/Scripts/toastr/ProcessingJs.js")"></script>
+    <script src="@Url.Content("~/Scripts/toastr/toastr.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/app/JobsJs.js")"></script>
+    
+}
+
+<h2>@ViewBag.Title.</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table" id="JobData">
+    <thead>
+    <tr>
+        <th>
+            Posted Date
+        </th>
+        <th>
+            Expire Date
+        </th>
+        <th>
+            Job Title
+        </th>
+        <th>
+            Company Name
+        </th>
+        <th>
+            Company Id
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+        </thead>
+</table>
